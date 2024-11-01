@@ -7,70 +7,122 @@
     <style>
         /* スタイル設定 */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
         }
         header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 15px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            font-size: 1.8em;
+            margin: 0;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1em;
         }
         nav {
             display: flex;
             justify-content: center;
-            background-color: #333;
+            background-color: #444;
+            padding: 10px 0;
         }
         nav a {
             color: white;
-            padding: 14px 35px;
+            padding: 12px 25px;
+            margin: 0 10px;
             text-decoration: none;
-            text-align: center;
+            font-weight: bold;
+            border-radius: 5px;
         }
         nav a:hover {
-            background-color: #ddd;
-            color: black;
+            background-color: #4CAF50;
+            color: white;
         }
         section {
-            padding: 20px;
+            padding: 40px 10%;
         }
         footer {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 10px;
+            padding: 15px;
             position: fixed;
             width: 100%;
             bottom: 0;
         }
         .band_icon {
-            width: 200px;
+            width: 150px;
+            border-radius: 8px;
+            margin-top: 10px;
         }
-        .flyer{
+        .flyer {
             width: 100%;
+            border-radius: 5px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
         }
-        .band-info {
-            display: none;
-            padding: 10px 0;
+        .band-section {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin-top: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
         .band-header {
             cursor: pointer;
-            padding: 10px;
-            background-color: #f4f4f4;
-            border: 1px solid #ddd;
-            margin-top: 5px;
+            padding: 15px;
+            font-weight: bold;
+            color: #333;
+            background-color: #e3e3e3;
+            border-bottom: 1px solid #ddd;
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .band-header:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .band-info {
+            display: none;
+            padding: 20px;
+            color: #555;
+        }
+        .band-info p {
+            margin: 10px 0;
+            font-size: 1em;
+        }
+        .band-info a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .band-info a:hover {
+            text-decoration: underline;
         }
         .back-to-top {
             position: fixed;
-            bottom: 80px;
+            bottom: 90px;
             right: 20px;
-            padding: 10px;
+            padding: 10px 15px;
             background-color: #4CAF50;
             color: white;
             border-radius: 5px;
             cursor: pointer;
             display: none;
+            font-weight: bold;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -84,8 +136,8 @@
 
     <!-- ナビゲーション -->
     <nav>
-        <a href="https://www.instagram.com/modern_music_troop?igsh=MTA4Zngxc2Z3enEyMg%3D%3D&utm_source=qr">Instagram<br>はこちらから！</a>
-        <a href="https://x.com/modern_music_t?s=21">Twitter<br>はこちらから！</a>
+        <a href="https://www.instagram.com/modern_music_troop?igsh=MTA4Zngxc2Z3enEyMg%3D%3D&utm_source=qr">Instagramはこちら！</a>
+        <a href="https://x.com/modern_music_t?s=21">Twitterはこちら！</a>
     </nav>
 
     <!-- メインコンテンツ -->
@@ -94,110 +146,86 @@
     <section id="home">
         <h2>MMTのバンドの曲まとめました！</h2>
         <p>早稲田祭に出演するバンド(ソロ)から曲を集めて、GoogleDriveにまとめました！ぜひ聴いていってください！</p>
-        <a href="https://drive.google.com/drive/folders/1-1azdFKtJysfyEcM0rkTtfFwdM8sxGj-">曲を集めたGoogleドライブのファイルはこちらから！</a>
+        <a href="https://drive.google.com/drive/folders/1-1azdFKtJysfyEcM0rkTtfFwdM8sxGj-">曲を集めたGoogleドライブのファイルはこちら！</a>
     </section>
 
     <section id="about">
         
         <h2>↓↓各バンド情報↓↓</h2>
-<h2>○教室企画@7号館206</h2>
+        <h2>○教室企画@7号館206</h2>
 
-<div class="band-section">
-    <div class="band-header">●ノコノコブンブン <span>10:10〜10:30</span></div>
-    <div class="band-info">
-        <img class="band_icon" src="IMG_7536.jpeg" alt="ノコノコブンブン">
-        <p></p>
-        <a href="https://linktr.ee/nokonokobunbun">のこのこブンブンのホームページ</a>
-    </div>
-</div>
+        <div class="band-section">
+            <div class="band-header">●ノコノコブンブン <span>10:10〜10:30</span></div>
+            <div class="band-info">
+                <img class="band_icon" src="IMG_7536.jpeg" alt="ノコノコブンブン">
+                <a href="https://linktr.ee/nokonokobunbun">のこのこブンブンのホームページ</a>
+            </div>
+        </div>
 
-<div class="band-section">
-    <div class="band-header">●KidNess <span>10:40〜11:00</span></div>
-    <div class="band-info">
-        <img class="band_icon" src="IMG_7545.jpeg" alt="KidNess">
-        <p></p>
-        <a href="https://www.instagram.com/kidness____jp?igsh=bDQ5ZnB3eGhsM25x">KidNessのInstagram</a>
-    </div>
-</div>
+        <div class="band-section">
+            <div class="band-header">●KidNess <span>10:40〜11:00</span></div>
+            <div class="band-info">
+                <img class="band_icon" src="IMG_7545.jpeg" alt="KidNess">
+                <a href="https://www.instagram.com/kidness____jp?igsh=bDQ5ZnB3eGhsM25x">KidNessのInstagram</a>
+            </div>
+        </div>
 
-<div class="band-section">
-    <div class="band-header">●カワムラミト <span>11:40〜12:00</span></div>
-    <div class="band-info">
-        <img class="band_icon" src="IMG_7543.jpeg" alt="カワムラミト">
-        <p></p>
-        <a href="https://lit.link/kawamuramito">カワムラミトのホームページ</a>
-    </div>
-</div>
+        <div class="band-section">
+            <div class="band-header">●カワムラミト <span>11:40〜12:00</span></div>
+            <div class="band-info">
+                <img class="band_icon" src="IMG_7543.jpeg" alt="カワムラミト">
+                <a href="https://lit.link/kawamuramito">カワムラミトのホームページ</a>
+            </div>
+        </div>
 
-<div class="band-section">
-    <div class="band-header">●越冬 <span>12:10〜12:30</span></div>
-    <div class="band-info">
-        <img class="band_icon" src="IMG_7546.jpeg" alt="越冬">
-        <p></p>
-        <a href="https://linktr.ee/daikanyamakei">越冬のホームページ</a>
-    </div>
-</div>
+        <div class="band-section">
+            <div class="band-header">●越冬 <span>12:10〜12:30</span></div>
+            <div class="band-info">
+                <img class="band_icon" src="IMG_7546.jpeg" alt="越冬">
+                <a href="https://linktr.ee/daikanyamakei">越冬のホームページ</a>
+            </div>
+        </div>
 
-<div class="band-section">
-    <div class="band-header">●pseudonym <span>14:20〜14:40</span></div>
-    <div class="band-info">
-        <img class="band_icon" src="IMG_7542.jpeg" alt="pseudonym">
-    </div>
-</div>
+        <div class="band-section">
+            <div class="band-header">●pseudonym <span>14:20〜14:40</span></div>
+            <div class="band-info">
+                <img class="band_icon" src="IMG_7542.jpeg" alt="pseudonym">
+            </div>
+        </div>
 
-<div class="band-section">
-    <div class="band-header">●sin <span>14:50〜15:10</span></div>
-    <div class="band-info">
-        <img class="band_icon" src="IMG_7540.jpeg" alt="sin">
-    </div>
-</div>
+        <div class="band-section">
+            <div class="band-header">●sin <span>14:50〜15:10</span></div>
+            <div class="band-info">
+                <img class="band_icon" src="IMG_7540.jpeg" alt="sin">
+            </div>
+        </div>
 
-<div class="band-section">
-    <div class="band-header">●Mrs.MUSCAT <span>16:30〜16:50</span></div>
-    <div class="band-info">
-        <img class="band_icon" src="IMG_7544.jpeg" alt="Mrs.MUSCAT">
-        <p></p>
-        <a href="https://youtube.com/@catty_dog?si=M9enHs1g5cZtKQTn">Mrs.MUSCATの代表者 奏夢/CattyDog YouTubeチャンネル</a>
-    </div>
-</div>
+        <div class="band-section">
+            <div class="band-header">●Mrs.MUSCAT <span>16:30〜16:50</span></div>
+            <div class="band-info">
+                <img class="band_icon" src="IMG_7544.jpeg" alt="Mrs.MUSCAT">
+                <a href="https://youtube.com/@catty_dog?si=M9enHs1g5cZtKQTn">Mrs.MUSCATの代表者 奏夢/CattyDog YouTubeチャンネル</a>
+            </div>
+        </div>
 
-<h2>○外企画@2号館横</h2>
+        <h2>○外企画@2号館横</h2>
 
-<div class="band-section">
-    <div class="band-header">●ぴくぴく隊 <span>13:10〜13:25</span></div>
-    <div class="band-info">
-        <img class="band_icon" src="IMG_7301.jpeg" alt="ぴくぴく隊">
-        <p></p>
-        <a href="https://linktr.ee/pikupikutai">ぴくぴく隊のホームページ</a>
-    </div>
-</div>
+        <div class="band-section">
+            <div class="band-header">●ぴくぴく隊 <span>13:10〜13:25</span></div>
+            <div class="band-info">
+                <img class="band_icon" src="IMG_7301.jpeg" alt="ぴくぴく隊">
+                <a href="https://linktr.ee/pikupikutai">ぴくぴく隊のホームページ</a>
+            </div>
+        </div>
 
-<div class="band-section">
-    <div class="band-header">●ノコノコブンブン <span>13:35〜13:50</span></div>
-    <div class="band-info">
-        <img class="band_icon" src="IMG_7536.jpeg" alt="ノコノコブンブン">
-        <p></p>
-        <a href="https://linktr.ee/nokonokobunbun">のこのこブンブンのホームページ</a>
-    </div>
-</div>
-
-<div class="band-section">
-    <div class="band-header">●Syllollysmi <span>15:10〜15:25</span></div>
-    <div class="band-info">
-        <img class="band_icon" src="IMG_7539.jpeg" alt="Syllollysmi">
-    </div>
-</div>
-
-<div class="band-section">
-    <div class="band-header">●夏を越えて <span>15:35〜15:50</span></div>
-    <div class="band-info">
-        <img class="band_icon" src="IMG_7538.jpeg" alt="夏を越えて">
-        <p></p>
-        <a href="https://www.instagram.com/natsu_wo_koete?igsh=dDdocjh5YWRzNDU=">夏を越えてのInstagram</a>
-    </div>
-</div>
-
-
+        <div class="band-section">
+            <div class="band-header">●THE リマインズ <span>14:40〜14:55</span></div>
+            <div class="band-info">
+                <img class="band_icon" src="IMG_7512.jpeg" alt="THE リマインズ">
+                <a href="https://lit.link/thereminds">THE リマインズのホームページ</a>
+            </div>
+        </div>
+        
     </section>
 
     <!-- トップに戻るボタン -->

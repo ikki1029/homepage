@@ -50,6 +50,28 @@
         .flyer{
             width: 100%;
         }
+        .band-info {
+            display: none;
+            padding: 10px 0;
+        }
+        .band-header {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            margin-top: 5px;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -67,8 +89,8 @@
     </nav>
 
     <!-- メインコンテンツ -->
-    <img class="flyer" src="IMG_7561.jpeg"></img>
-    
+    <img class="flyer" src="IMG_7561.jpeg" alt="Flyer Image">
+
     <section id="home">
         <h2>MMTのバンドの曲まとめました！</h2>
         <p>早稲田祭に出演するバンド(ソロ)から曲を集めて、GoogleDriveにまとめました！ぜひ聴いていってください！</p>
@@ -76,81 +98,134 @@
     </section>
 
     <section id="about">
+        
         <h2>↓↓各バンド情報↓↓</h2>
-        <h2>○教室企画@7号館206</h2>
-        <div>
-            <h3>●ノコノコブンブン</h3>
-            <h4>10:10〜10:30</h4>
-            <img class="band_icon" src="IMG_7536.jpeg"></img>
-            <p></p>
-            <a href="https://linktr.ee/nokonokobunbun">のこのこブンブンのホームページ</a>
-        </div>
-        <div>
-            <h3>●KidNess </h3>
-            <h4>10:40〜11:00</h4>
-            <img class="band_icon" src="IMG_7545.jpeg"></img>
-            <p></p>
-            <a href="https://www.instagram.com/kidness____jp?igsh=bDQ5ZnB3eGhsM25x">KidNessのInstagram</a>
-        </div>
-        <div>
-            <h3>●カワムラミト</h3>
-            <h4>11:40〜12:00</h4>
-            <img class="band_icon" src="IMG_7543.jpeg"></img>
-            <p></p>
-            <a href="https://lit.link/kawamuramito">カワムラミトのホームページ</a>
-        </div>
-        <div>
-            <h3>●越冬</h3>
-            <h4>12:10〜12:30</h4>
-            <img class="band_icon" src="IMG_7546.jpeg"></img>
-            <p></p>
-            <a href="https://linktr.ee/daikanyamakei">越冬のホームページ</a>
-        </div>
-        <div>
-            <h3>●pseudonym</h3>
-            <h4>14:20〜14:40</h4>
-            <img class="band_icon" src="IMG_7542.jpeg"></img>
-        </div>
-        <div>
-            <h3>●sin</h3>
-            <h4>14:50〜15:10</h4>
-            <img class="band_icon" src="IMG_7540.jpeg"></img>
-        </div>
-        <div>
-            <h3>●Mrs.MUSCAT</h3>
-            <h4>16:30〜16:50</h4>
-            <img class="band_icon" src="IMG_7544.jpeg"></img>
-            <p></p>
-            <a href="https://youtube.com/@catty_dog?si=M9enHs1g5cZtKQTn">Mrs.MUSCATの代表者 奏夢/CattyDog YouTubeチャンネル</a>
-        </div>
-        <h2>○外企画@2号館横</h2>
-        <div>
-            <h3>●ぴくぴく隊</h3>
-            <h4>13:10〜13:25</h4>
-            <img class="band_icon" src="IMG_7301.jpeg"></img>
-            <p></p>
-            <a href="https://linktr.ee/pikupikutai">ぴくぴく隊のホームページ</a>
-        </div>
-        <div>
-            <h3>●ノコノコブンブン</h3>
-            <h4>13:35〜13:50</h4>
-            <img class="band_icon" src="IMG_7536.jpeg"></img>
-            <p></p>
-            <a href="https://linktr.ee/nokonokobunbun">のこのこブンブンのホームページ</a>
-        </div>
-        <div>
-            <h3>●Syllollysmi</h3>
-            <h4>15:10〜15:25</h4>
-            <img class="band_icon" src="IMG_7539.jpeg"></img>
-        </div>
-        <div>
-            <h3>●夏を越えて</h3>
-            <h4>15:35〜15:50</h4>
-            <img class="band_icon" src="IMG_7538.jpeg"></img>
-            <p></p>
-            <a href="https://www.instagram.com/natsu_wo_koete?igsh=dDdocjh5YWRzNDU=">夏を越えてのInstagram</a>
-        </div>
+<h2>○教室企画@7号館206</h2>
+
+<div class="band-section">
+    <div class="band-header">●ノコノコブンブン <span>10:10〜10:30</span></div>
+    <div class="band-info">
+        <img class="band_icon" src="IMG_7536.jpeg" alt="ノコノコブンブン">
+        <p></p>
+        <a href="https://linktr.ee/nokonokobunbun">のこのこブンブンのホームページ</a>
+    </div>
+</div>
+
+<div class="band-section">
+    <div class="band-header">●KidNess <span>10:40〜11:00</span></div>
+    <div class="band-info">
+        <img class="band_icon" src="IMG_7545.jpeg" alt="KidNess">
+        <p></p>
+        <a href="https://www.instagram.com/kidness____jp?igsh=bDQ5ZnB3eGhsM25x">KidNessのInstagram</a>
+    </div>
+</div>
+
+<div class="band-section">
+    <div class="band-header">●カワムラミト <span>11:40〜12:00</span></div>
+    <div class="band-info">
+        <img class="band_icon" src="IMG_7543.jpeg" alt="カワムラミト">
+        <p></p>
+        <a href="https://lit.link/kawamuramito">カワムラミトのホームページ</a>
+    </div>
+</div>
+
+<div class="band-section">
+    <div class="band-header">●越冬 <span>12:10〜12:30</span></div>
+    <div class="band-info">
+        <img class="band_icon" src="IMG_7546.jpeg" alt="越冬">
+        <p></p>
+        <a href="https://linktr.ee/daikanyamakei">越冬のホームページ</a>
+    </div>
+</div>
+
+<div class="band-section">
+    <div class="band-header">●pseudonym <span>14:20〜14:40</span></div>
+    <div class="band-info">
+        <img class="band_icon" src="IMG_7542.jpeg" alt="pseudonym">
+    </div>
+</div>
+
+<div class="band-section">
+    <div class="band-header">●sin <span>14:50〜15:10</span></div>
+    <div class="band-info">
+        <img class="band_icon" src="IMG_7540.jpeg" alt="sin">
+    </div>
+</div>
+
+<div class="band-section">
+    <div class="band-header">●Mrs.MUSCAT <span>16:30〜16:50</span></div>
+    <div class="band-info">
+        <img class="band_icon" src="IMG_7544.jpeg" alt="Mrs.MUSCAT">
+        <p></p>
+        <a href="https://youtube.com/@catty_dog?si=M9enHs1g5cZtKQTn">Mrs.MUSCATの代表者 奏夢/CattyDog YouTubeチャンネル</a>
+    </div>
+</div>
+
+<h2>○外企画@2号館横</h2>
+
+<div class="band-section">
+    <div class="band-header">●ぴくぴく隊 <span>13:10〜13:25</span></div>
+    <div class="band-info">
+        <img class="band_icon" src="IMG_7301.jpeg" alt="ぴくぴく隊">
+        <p></p>
+        <a href="https://linktr.ee/pikupikutai">ぴくぴく隊のホームページ</a>
+    </div>
+</div>
+
+<div class="band-section">
+    <div class="band-header">●ノコノコブンブン <span>13:35〜13:50</span></div>
+    <div class="band-info">
+        <img class="band_icon" src="IMG_7536.jpeg" alt="ノコノコブンブン">
+        <p></p>
+        <a href="https://linktr.ee/nokonokobunbun">のこのこブンブンのホームページ</a>
+    </div>
+</div>
+
+<div class="band-section">
+    <div class="band-header">●Syllollysmi <span>15:10〜15:25</span></div>
+    <div class="band-info">
+        <img class="band_icon" src="IMG_7539.jpeg" alt="Syllollysmi">
+    </div>
+</div>
+
+<div class="band-section">
+    <div class="band-header">●夏を越えて <span>15:35〜15:50</span></div>
+    <div class="band-info">
+        <img class="band_icon" src="IMG_7538.jpeg" alt="夏を越えて">
+        <p></p>
+        <a href="https://www.instagram.com/natsu_wo_koete?igsh=dDdocjh5YWRzNDU=">夏を越えてのInstagram</a>
+    </div>
+</div>
+
+
     </section>
+
+    <!-- トップに戻るボタン -->
+    <div class="back-to-top">トップへ戻る</div>
+
+    <script>
+        // アコーディオン機能
+        document.querySelectorAll('.band-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const info = header.nextElementSibling;
+                info.style.display = info.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+
+        // トップへ戻るボタンの表示・非表示と機能
+        const backToTopButton = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 
 </body>
 </html>
